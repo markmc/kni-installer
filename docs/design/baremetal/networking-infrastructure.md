@@ -26,7 +26,9 @@ In the `baremetal` platform, a VIP (Virtual IP) is used to provide
 failover of the API server across the control plane machines
 (including the bootstrap VM). This "API VIP" is provided by the user
 as an `install-config.yaml` parameter and the installation process
-configures `keepalived` to manage this VIP.
+configures
+[`keepalived-ipfailover`](https://github.com/openshift/images/tree/master/ipfailover/keepalived)
+to manage this VIP.
 
 The API VIP first resides on the bootstrap VM. The `keepalived`
 instance here is managed by systemd and a script is used to generate
