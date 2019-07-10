@@ -57,6 +57,8 @@ In addition, internally resolvable DNS records are required for:
 
 * `api-int.$cluster_name.$base-domain` -
 * `etcd-NNN.$cluster_name.$base-domain` -
+* `_etcd-server-ssl._tcp` SRV records pointing at the
+  `etcd-NN.$cluster_name.$base_domain` records
 
 On other platforms (for example, see the CloudFormation templates
 referenced by [the AWS UPI
